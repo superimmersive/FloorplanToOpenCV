@@ -26,7 +26,7 @@ npm run dev
 
 ### Git LFS
 
-PyTorch weights under `models/` are stored with Git LFS (see `.gitattributes`). After cloning:
+Large binaries tracked with Git LFS (see `.gitattributes`): **`models/*.pt`** (PyTorch) and **`*.obj`** (e.g. Blender mesh references under `webappVectorEditorTest/blender/`). After cloning:
 
 ```bash
 git lfs install

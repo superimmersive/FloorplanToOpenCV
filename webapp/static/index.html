@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Floorplan Detection — Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Floorplan Detection</h1>
+    <p class="subtitle">Upload a floor plan, run the pipeline, view overlays and edit the wall mask. Use <strong>http://localhost:8000</strong> (Start Web App task)—not Live Server—so upload and API work.</p>
+  </header>
+
+  <main class="main">
+    <section class="upload-section card">
+      <h2>1. Upload floor plan</h2>
+      <input type="file" id="fileInput" accept="image/*" />
+      <button type="button" id="uploadBtn" disabled>Upload</button>
+      <p id="uploadStatus" class="status"></p>
+      <p id="jobId" class="job-id"></p>
+    </section>
+
+    <section class="pipeline-section card" id="pipelineSection" hidden>
+      <h2>2. Run pipeline</h2>
+      <p>Run walls + dimension detection only (walls mask, dim lines, measurements, plan dimensions).</p>
+      <button type="button" id="runPipelineBtn">Run full pipeline</button>
+      <p id="pipelineStatus" class="status"></p>
+    </section>
+
+    <section class="viewer-section card" id="viewerSection" hidden>
+      <h2>3. View results</h2>
+      <p class="editor-link-wrap" id="editorLinkWrap" hidden>
+        <a id="editorLink" href="#" target="_blank" rel="noopener">Open Vector Editor</a>
+      </p>
+      <div class="layer-controls">
+        <label>Layer:</label>
+        <select id="layerSelect">
+          <option value="walls">Walls</option>
+          <option value="plan_dimensions">Plan dimensions (W×L)</option>
+        </select>
+      </div>
+      <div class="canvas-wrap">
+        <img id="mainImage" alt="Floor plan" />
+        <canvas id="vectorCanvas" hidden></canvas>
+        <canvas id="maskCanvas" hidden></canvas>
+      </div>
+    </section>
+
+    <!-- Vector editor hidden for walls-only scope -->
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

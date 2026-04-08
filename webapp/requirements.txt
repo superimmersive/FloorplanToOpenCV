@@ -1,0 +1,8 @@
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart
+# Detection pipeline (used when you run "Run full pipeline" in the web app)
+opencv-python
+numpy
+easyocr
+torch

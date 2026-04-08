@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "bbox": [
+      929,
+      207,
+      960,
+      535
+    ],
+    "orientation": "vertical"
+  },
+  {
+    "id": 2,
+    "bbox": [
+      337,
+      989,
+      390,
+      1194
+    ],
+    "orientation": "vertical"
+  },
+  {
+    "id": 3,
+    "bbox": [
+      1044,
+      1296,
+      1059,
+      1388
+    ],
+    "orientation": "horizontal"
+  },
+  {
+    "id": 4,
+    "bbox": [
+      1197,
+      1330,
+      1210,
+      1388
+    ],
+    "orientation": "horizontal"
+  },
+  {
+    "id": 5,
+    "bbox": [
+      524,
+      1331,
+      729,
+      1388
+    ],
+    "orientation": "horizontal"
+  },
+  {
+    "id": 6,
+    "bbox": [
+      1488,
+      1331,
+      1694,
+      1387
+    ],
+    "orientation": "horizontal"
+  }
+]

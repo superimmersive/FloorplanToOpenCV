@@ -1,0 +1,919 @@
+{
+  "scale_mm_per_px": 6.22,
+  "walls": [
+    {
+      "id": "H1",
+      "orientation": "horizontal",
+      "bbox_px": [
+        1231,
+        206,
+        1916,
+        251
+      ],
+      "length_mm": 4260.7,
+      "length_imperial": "14'-0\"",
+      "thickness_mm": 286.1
+    },
+    {
+      "id": "H2",
+      "orientation": "horizontal",
+      "bbox_px": [
+        340,
+        207,
+        1068,
+        251
+      ],
+      "length_mm": 4528.2,
+      "length_imperial": "14'-10\"",
+      "thickness_mm": 279.9
+    },
+    {
+      "id": "H3",
+      "orientation": "horizontal",
+      "bbox_px": [
+        934,
+        533,
+        1311,
+        543
+      ],
+      "length_mm": 2344.9,
+      "length_imperial": "7'-8\"",
+      "thickness_mm": 68.4
+    },
+    {
+      "id": "H4",
+      "orientation": "horizontal",
+      "bbox_px": [
+        340,
+        911,
+        954,
+        921
+      ],
+      "length_mm": 3819.1,
+      "length_imperial": "12'-6\"",
+      "thickness_mm": 68.4
+    },
+    {
+      "id": "H5",
+      "orientation": "horizontal",
+      "bbox_px": [
+        756,
+        1087,
+        948,
+        1104
+      ],
+      "length_mm": 1194.2,
+      "length_imperial": "3'-11\"",
+      "thickness_mm": 112.0
+    },
+    {
+      "id": "H6",
+      "orientation": "horizontal",
+      "bbox_px": [
+        726,
+        1336,
+        1046,
+        1382
+      ],
+      "length_mm": 1990.4,
+      "length_imperial": "6'-6\"",
+      "thickness_mm": 292.3
+    },
+    {
+      "id": "H7",
+      "orientation": "horizontal",
+      "bbox_px": [
+        1207,
+        1336,
+        1490,
+        1382
+      ],
+      "length_mm": 1760.3,
+      "length_imperial": "5'-9\"",
+      "thickness_mm": 292.3
+    },
+    {
+      "id": "H8",
+      "orientation": "horizontal",
+      "bbox_px": [
+        1691,
+        1336,
+        1915,
+        1382
+      ],
+      "length_mm": 1393.3,
+      "length_imperial": "4'-7\"",
+      "thickness_mm": 292.3
+    },
+    {
+      "id": "H9",
+      "orientation": "horizontal",
+      "bbox_px": [
+        342,
+        1336,
+        526,
+        1382
+      ],
+      "length_mm": 1144.5,
+      "length_imperial": "3'-9\"",
+      "thickness_mm": 292.3
+    },
+    {
+      "id": "V10",
+      "orientation": "vertical",
+      "bbox_px": [
+        340,
+        731,
+        386,
+        991
+      ],
+      "length_mm": 1617.2,
+      "length_imperial": "5'-4\"",
+      "thickness_mm": 292.3
+    },
+    {
+      "id": "V11",
+      "orientation": "vertical",
+      "bbox_px": [
+        340,
+        207,
+        384,
+        419
+      ],
+      "length_mm": 1318.6,
+      "length_imperial": "4'-4\"",
+      "thickness_mm": 279.9
+    },
+    {
+      "id": "V12",
+      "orientation": "vertical",
+      "bbox_px": [
+        342,
+        1191,
+        385,
+        1382
+      ],
+      "length_mm": 1188.0,
+      "length_imperial": "3'-11\"",
+      "thickness_mm": 273.7
+    },
+    {
+      "id": "V13",
+      "orientation": "vertical",
+      "bbox_px": [
+        756,
+        1087,
+        765,
+        1382
+      ],
+      "length_mm": 1834.9,
+      "length_imperial": "6'-0\"",
+      "thickness_mm": 62.2
+    },
+    {
+      "id": "V14",
+      "orientation": "vertical",
+      "bbox_px": [
+        934,
+        207,
+        954,
+        742
+      ],
+      "length_mm": 3327.7,
+      "length_imperial": "10'-11\"",
+      "thickness_mm": 130.6
+    },
+    {
+      "id": "V15",
+      "orientation": "vertical",
+      "bbox_px": [
+        935,
+        1270,
+        989,
+        1382
+      ],
+      "length_mm": 696.6,
+      "length_imperial": "2'-3\"",
+      "thickness_mm": 342.1
+    },
+    {
+      "id": "V16",
+      "orientation": "vertical",
+      "bbox_px": [
+        1150,
+        709,
+        1162,
+        838
+      ],
+      "length_mm": 802.4,
+      "length_imperial": "2'-8\"",
+      "thickness_mm": 80.9
+    },
+    {
+      "id": "V17",
+      "orientation": "vertical",
+      "bbox_px": [
+        1256,
+        206,
+        1312,
+        358
+      ],
+      "length_mm": 945.4,
+      "length_imperial": "3'-1\"",
+      "thickness_mm": 354.5
+    },
+    {
+      "id": "V18",
+      "orientation": "vertical",
+      "bbox_px": [
+        1292,
+        533,
+        1311,
+        954
+      ],
+      "length_mm": 2618.6,
+      "length_imperial": "8'-7\"",
+      "thickness_mm": 124.4
+    },
+    {
+      "id": "V19",
+      "orientation": "vertical",
+      "bbox_px": [
+        1295,
+        1107,
+        1312,
+        1382
+      ],
+      "length_mm": 1710.5,
+      "length_imperial": "5'-7\"",
+      "thickness_mm": 112.0
+    },
+    {
+      "id": "V20",
+      "orientation": "vertical",
+      "bbox_px": [
+        1870,
+        206,
+        1916,
+        394
+      ],
+      "length_mm": 1169.4,
+      "length_imperial": "3'-10\"",
+      "thickness_mm": 292.3
+    },
+    {
+      "id": "V21",
+      "orientation": "vertical",
+      "bbox_px": [
+        1871,
+        1247,
+        1915,
+        1382
+      ],
+      "length_mm": 839.7,
+      "length_imperial": "2'-9\"",
+      "thickness_mm": 279.9
+    },
+    {
+      "id": "V22",
+      "orientation": "vertical",
+      "bbox_px": [
+        1875,
+        687,
+        1916,
+        958
+      ],
+      "length_mm": 1685.6,
+      "length_imperial": "5'-6\"",
+      "thickness_mm": 261.2
+    }
+  ],
+  "windows": [
+    {
+      "id": 1,
+      "bbox_px": [
+        1895,
+        402,
+        1914,
+        687
+      ],
+      "orientation": "vertical",
+      "opening_mm": 1772.7,
+      "opening_imperial": "5'-10\"",
+      "bbox_width_mm": 118.2,
+      "bbox_height_mm": 1772.7,
+      "wall_id": "V22",
+      "offset_from_wall_start_mm": -886.3
+    },
+    {
+      "id": 2,
+      "bbox_px": [
+        335,
+        999,
+        390,
+        1182
+      ],
+      "orientation": "vertical",
+      "opening_mm": 1138.3,
+      "opening_imperial": "3'-9\"",
+      "bbox_width_mm": 342.1,
+      "bbox_height_mm": 1138.3,
+      "wall_id": "V10",
+      "offset_from_wall_start_mm": 2236.1
+    },
+    {
+      "id": 3,
+      "bbox_px": [
+        1493,
+        1323,
+        1691,
+        1388
+      ],
+      "orientation": "horizontal",
+      "opening_mm": 1231.6,
+      "opening_imperial": "4'-0\"",
+      "bbox_width_mm": 1231.6,
+      "bbox_height_mm": 404.3,
+      "wall_id": "H7",
+      "offset_from_wall_start_mm": 2394.7
+    },
+    {
+      "id": 4,
+      "bbox_px": [
+        530,
+        1326,
+        728,
+        1388
+      ],
+      "orientation": "horizontal",
+      "opening_mm": 1231.6,
+      "opening_imperial": "4'-0\"",
+      "bbox_width_mm": 1231.6,
+      "bbox_height_mm": 385.6,
+      "wall_id": "H6",
+      "offset_from_wall_start_mm": -603.3
+    }
+  ],
+  "doors": [
+    {
+      "id": 1,
+      "bbox_px": [
+        1040,
+        1202,
+        1364,
+        1526
+      ],
+      "opening_width_mm": 920.6,
+      "opening_width_imperial": "3'-0\"",
+      "wall_id": "H6",
+      "offset_from_wall_start_mm": 2960.7
+    },
+    {
+      "id": 2,
+      "bbox_px": [
+        923,
+        71,
+        1233,
+        381
+      ],
+      "opening_width_mm": 877.0,
+      "opening_width_imperial": "2'-11\"",
+      "wall_id": "H1",
+      "offset_from_wall_start_mm": -951.7
+    },
+    {
+      "id": 3,
+      "bbox_px": [
+        1163,
+        947,
+        1467,
+        1251
+      ],
+      "opening_width_mm": 864.6,
+      "opening_width_imperial": "2'-10\"",
+      "wall_id": "V19",
+      "offset_from_wall_start_mm": -49.8
+    },
+    {
+      "id": 4,
+      "bbox_px": [
+        1762,
+        823,
+        2052,
+        1113
+      ],
+      "opening_width_mm": 821.0,
+      "opening_width_imperial": "2'-8\"",
+      "wall_id": "V22",
+      "offset_from_wall_start_mm": 1747.8
+    },
+    {
+      "id": 5,
+      "bbox_px": [
+        1154,
+        688,
+        1430,
+        964
+      ],
+      "opening_width_mm": 783.7,
+      "opening_width_imperial": "2'-7\"",
+      "wall_id": "V18",
+      "offset_from_wall_start_mm": 1822.5
+    },
+    {
+      "id": 6,
+      "bbox_px": [
+        1816,
+        1101,
+        2040,
+        1325
+      ],
+      "opening_width_mm": 634.4,
+      "opening_width_imperial": "2'-1\"",
+      "wall_id": "V21",
+      "offset_from_wall_start_mm": -211.5
+    },
+    {
+      "id": 7,
+      "bbox_px": [
+        807,
+        855,
+        1007,
+        1055
+      ],
+      "opening_width_mm": 566.0,
+      "opening_width_imperial": "1'-10\"",
+      "wall_id": "H4",
+      "offset_from_wall_start_mm": 3526.7
+    },
+    {
+      "id": 8,
+      "bbox_px": [
+        807,
+        772,
+        1007,
+        972
+      ],
+      "opening_width_mm": 566.0,
+      "opening_width_imperial": "1'-10\"",
+      "wall_id": "V14",
+      "offset_from_wall_start_mm": 4136.3
+    }
+  ],
+  "fixtures": [
+    {
+      "type": "stove",
+      "bbox_px": [
+        1594,
+        254,
+        1694,
+        351
+      ],
+      "width_mm": 622.0,
+      "height_mm": 603.3,
+      "width_imperial": "2'-0\"",
+      "height_imperial": "2'-0\""
+    },
+    {
+      "type": "toilet",
+      "bbox_px": [
+        827,
+        1229,
+        896,
+        1334
+      ],
+      "width_mm": 429.2,
+      "height_mm": 653.1,
+      "width_imperial": "1'-5\"",
+      "height_imperial": "2'-2\""
+    },
+    {
+      "type": "basin",
+      "bbox_px": [
+        769,
+        1132,
+        814,
+        1201
+      ],
+      "width_mm": 279.9,
+      "height_mm": 429.2,
+      "width_imperial": "0'-11\"",
+      "height_imperial": "1'-5\""
+    },
+    {
+      "type": "sink",
+      "bbox_px": [
+        1780,
+        439,
+        1862,
+        608
+      ],
+      "width_mm": 510.0,
+      "height_mm": 1051.2,
+      "width_imperial": "1'-8\"",
+      "height_imperial": "3'-5\""
+    },
+    {
+      "type": "fridge",
+      "bbox_px": [
+        1318,
+        254,
+        1422,
+        353
+      ],
+      "width_mm": 646.9,
+      "height_mm": 615.8,
+      "width_imperial": "2'-1\"",
+      "height_imperial": "2'-0\""
+    }
+  ],
+  "kitchen_counter": {
+    "bbox_px": [
+      1426,
+      257,
+      1865,
+      874
+    ],
+    "width_mm": 2730.6,
+    "height_mm": 3837.7,
+    "width_imperial": "9'-0\"",
+    "height_imperial": "12'-7\"",
+    "area_m2": 4.25
+  },
+  "wall_element_layout": [
+    {
+      "wall_id": "H1",
+      "wall_length_mm": 4260.7,
+      "wall_length_imperial": "14'-0\"",
+      "elements": [
+        {
+          "type": "wall_start",
+          "position_mm": 0
+        },
+        {
+          "type": "door",
+          "id": 2,
+          "position_mm": -1390.2,
+          "width_mm": 877.0
+        },
+        {
+          "type": "wall_end",
+          "position_mm": 4260.7
+        }
+      ],
+      "gaps": [
+        {
+          "from": "wall_start",
+          "to": "door#2",
+          "gap_mm": 0.0,
+          "gap_imperial": "0'-0\""
+        },
+        {
+          "from": "door#2",
+          "to": "wall_end",
+          "gap_mm": 4773.8,
+          "gap_imperial": "15'-8\""
+        }
+      ]
+    },
+    {
+      "wall_id": "H4",
+      "wall_length_mm": 3819.1,
+      "wall_length_imperial": "12'-6\"",
+      "elements": [
+        {
+          "type": "wall_start",
+          "position_mm": 0
+        },
+        {
+          "type": "door",
+          "id": 7,
+          "position_mm": 3243.7,
+          "width_mm": 566.0
+        },
+        {
+          "type": "wall_end",
+          "position_mm": 3819.1
+        }
+      ],
+      "gaps": [
+        {
+          "from": "wall_start",
+          "to": "door#7",
+          "gap_mm": 3243.7,
+          "gap_imperial": "10'-8\""
+        },
+        {
+          "from": "door#7",
+          "to": "wall_end",
+          "gap_mm": 9.3,
+          "gap_imperial": "0'-0\""
+        }
+      ]
+    },
+    {
+      "wall_id": "H6",
+      "wall_length_mm": 1990.4,
+      "wall_length_imperial": "6'-6\"",
+      "elements": [
+        {
+          "type": "wall_start",
+          "position_mm": 0
+        },
+        {
+          "type": "window",
+          "id": 4,
+          "position_mm": -1219.1,
+          "width_mm": 1231.6
+        },
+        {
+          "type": "door",
+          "id": 1,
+          "position_mm": 2500.4,
+          "width_mm": 920.6
+        },
+        {
+          "type": "wall_end",
+          "position_mm": 1990.4
+        }
+      ],
+      "gaps": [
+        {
+          "from": "wall_start",
+          "to": "window#4",
+          "gap_mm": 0.0,
+          "gap_imperial": "0'-0\""
+        },
+        {
+          "from": "window#4",
+          "to": "door#1",
+          "gap_mm": 2488.0,
+          "gap_imperial": "8'-2\""
+        },
+        {
+          "from": "door#1",
+          "to": "wall_end",
+          "gap_mm": 0.0,
+          "gap_imperial": "0'-0\""
+        }
+      ]
+    },
+    {
+      "wall_id": "H7",
+      "wall_length_mm": 1760.3,
+      "wall_length_imperial": "5'-9\"",
+      "elements": [
+        {
+          "type": "wall_start",
+          "position_mm": 0
+        },
+        {
+          "type": "window",
+          "id": 3,
+          "position_mm": 1778.9,
+          "width_mm": 1231.6
+        },
+        {
+          "type": "wall_end",
+          "position_mm": 1760.3
+        }
+      ],
+      "gaps": [
+        {
+          "from": "wall_start",
+          "to": "window#3",
+          "gap_mm": 1778.9,
+          "gap_imperial": "5'-10\""
+        },
+        {
+          "from": "window#3",
+          "to": "wall_end",
+          "gap_mm": 0.0,
+          "gap_imperial": "0'-0\""
+        }
+      ]
+    },
+    {
+      "wall_id": "V10",
+      "wall_length_mm": 1617.2,
+      "wall_length_imperial": "5'-4\"",
+      "elements": [
+        {
+          "type": "wall_start",
+          "position_mm": 0
+        },
+        {
+          "type": "window",
+          "id": 2,
+          "position_mm": 1667.0,
+          "width_mm": 1138.3
+        },
+        {
+          "type": "wall_end",
+          "position_mm": 1617.2
+        }
+      ],
+      "gaps": [
+        {
+          "from": "wall_start",
+          "to": "window#2",
+          "gap_mm": 1667.0,
+          "gap_imperial": "5'-6\""
+        },
+        {
+          "from": "window#2",
+          "to": "wall_end",
+          "gap_mm": 0.0,
+          "gap_imperial": "0'-0\""
+        }
+      ]
+    },
+    {
+      "wall_id": "V14",
+      "wall_length_mm": 3327.7,
+      "wall_length_imperial": "10'-11\"",
+      "elements": [
+        {
+          "type": "wall_start",
+          "position_mm": 0
+        },
+        {
+          "type": "door",
+          "id": 8,
+          "position_mm": 3853.3,
+          "width_mm": 566.0
+        },
+        {
+          "type": "wall_end",
+          "position_mm": 3327.7
+        }
+      ],
+      "gaps": [
+        {
+          "from": "wall_start",
+          "to": "door#8",
+          "gap_mm": 3853.3,
+          "gap_imperial": "12'-8\""
+        },
+        {
+          "from": "door#8",
+          "to": "wall_end",
+          "gap_mm": 0.0,
+          "gap_imperial": "0'-0\""
+        }
+      ]
+    },
+    {
+      "wall_id": "V18",
+      "wall_length_mm": 2618.6,
+      "wall_length_imperial": "8'-7\"",
+      "elements": [
+        {
+          "type": "wall_start",
+          "position_mm": 0
+        },
+        {
+          "type": "door",
+          "id": 5,
+          "position_mm": 1430.6,
+          "width_mm": 783.7
+        },
+        {
+          "type": "wall_end",
+          "position_mm": 2618.6
+        }
+      ],
+      "gaps": [
+        {
+          "from": "wall_start",
+          "to": "door#5",
+          "gap_mm": 1430.6,
+          "gap_imperial": "4'-8\""
+        },
+        {
+          "from": "door#5",
+          "to": "wall_end",
+          "gap_mm": 404.3,
+          "gap_imperial": "1'-4\""
+        }
+      ]
+    },
+    {
+      "wall_id": "V19",
+      "wall_length_mm": 1710.5,
+      "wall_length_imperial": "5'-7\"",
+      "elements": [
+        {
+          "type": "wall_start",
+          "position_mm": 0
+        },
+        {
+          "type": "door",
+          "id": 3,
+          "position_mm": -482.0,
+          "width_mm": 864.6
+        },
+        {
+          "type": "wall_end",
+          "position_mm": 1710.5
+        }
+      ],
+      "gaps": [
+        {
+          "from": "wall_start",
+          "to": "door#3",
+          "gap_mm": 0.0,
+          "gap_imperial": "0'-0\""
+        },
+        {
+          "from": "door#3",
+          "to": "wall_end",
+          "gap_mm": 1328.0,
+          "gap_imperial": "4'-4\""
+        }
+      ]
+    },
+    {
+      "wall_id": "V21",
+      "wall_length_mm": 839.7,
+      "wall_length_imperial": "2'-9\"",
+      "elements": [
+        {
+          "type": "wall_start",
+          "position_mm": 0
+        },
+        {
+          "type": "door",
+          "id": 6,
+          "position_mm": -528.7,
+          "width_mm": 634.4
+        },
+        {
+          "type": "wall_end",
+          "position_mm": 839.7
+        }
+      ],
+      "gaps": [
+        {
+          "from": "wall_start",
+          "to": "door#6",
+          "gap_mm": 0.0,
+          "gap_imperial": "0'-0\""
+        },
+        {
+          "from": "door#6",
+          "to": "wall_end",
+          "gap_mm": 734.0,
+          "gap_imperial": "2'-5\""
+        }
+      ]
+    },
+    {
+      "wall_id": "V22",
+      "wall_length_mm": 1685.6,
+      "wall_length_imperial": "5'-6\"",
+      "elements": [
+        {
+          "type": "wall_start",
+          "position_mm": 0
+        },
+        {
+          "type": "window",
+          "id": 1,
+          "position_mm": -1772.7,
+          "width_mm": 1772.7
+        },
+        {
+          "type": "door",
+          "id": 4,
+          "position_mm": 1337.3,
+          "width_mm": 821.0
+        },
+        {
+          "type": "wall_end",
+          "position_mm": 1685.6
+        }
+      ],
+      "gaps": [
+        {
+          "from": "wall_start",
+          "to": "window#1",
+          "gap_mm": 0.0,
+          "gap_imperial": "0'-0\""
+        },
+        {
+          "from": "window#1",
+          "to": "door#4",
+          "gap_mm": 1337.3,
+          "gap_imperial": "4'-5\""
+        },
+        {
+          "from": "door#4",
+          "to": "wall_end",
+          "gap_mm": 0.0,
+          "gap_imperial": "0'-0\""
+        }
+      ]
+    }
+  ]
+}

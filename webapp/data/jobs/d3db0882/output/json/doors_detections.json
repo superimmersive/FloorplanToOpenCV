@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "bbox": [
+      1070,
+      218,
+      1228,
+      376
+    ],
+    "center": [
+      1075,
+      223
+    ],
+    "radius": 148,
+    "coverage": 0.393,
+    "quadrant_coverage": [
+      0.994,
+      0.172,
+      0.228,
+      0.178
+    ],
+    "swing_quadrant": 0,
+    "swing_direction": "right-down",
+    "is_double_door": false
+  },
+  {
+    "id": 2,
+    "bbox": [
+      1166,
+      831,
+      1287,
+      952
+    ],
+    "center": [
+      1282,
+      836
+    ],
+    "radius": 111,
+    "coverage": 0.31,
+    "quadrant_coverage": [
+      0.078,
+      0.939,
+      0.156,
+      0.067
+    ],
+    "swing_quadrant": 1,
+    "swing_direction": "down-left",
+    "is_double_door": false
+  },
+  {
+    "id": 3,
+    "bbox": [
+      1892,
+      1095,
+      2043,
+      1246
+    ],
+    "center": [
+      1897,
+      1241
+    ],
+    "radius": 141,
+    "coverage": 0.306,
+    "quadrant_coverage": [
+      0.139,
+      0.178,
+      0.0,
+      0.906
+    ],
+    "swing_quadrant": 3,
+    "swing_direction": "up-right",
+    "is_double_door": false
+  },
+  {
+    "id": 4,
+    "bbox": [
+      1053,
+      1215,
+      1207,
+      1369
+    ],
+    "center": [
+      1202,
+      1364
+    ],
+    "radius": 144,
+    "coverage": 0.297,
+    "quadrant_coverage": [
+      0.067,
+      0.061,
+      0.961,
+      0.1
+    ],
+    "swing_quadrant": 2,
+    "swing_direction": "left-up",
+    "is_double_door": false
+  },
+  {
+    "id": 5,
+    "bbox": [
+      1310,
+      955,
+      1459,
+      1104
+    ],
+    "center": [
+      1315,
+      1099
+    ],
+    "radius": 139,
+    "coverage": 0.279,
+    "quadrant_coverage": [
+      0.017,
+      0.017,
+      0.117,
+      0.967
+    ],
+    "swing_quadrant": 3,
+    "swing_direction": "up-right",
+    "is_double_door": false
+  },
+  {
+    "id": 6,
+    "bbox": [
+      1902,
+      963,
+      2045,
+      1106
+    ],
+    "center": [
+      1907,
+      968
+    ],
+    "radius": 133,
+    "coverage": 0.278,
+    "quadrant_coverage": [
+      0.95,
+      0.022,
+      0.067,
+      0.072
+    ],
+    "swing_quadrant": 0,
+    "swing_direction": "right-down",
+    "is_double_door": false
+  },
+  {
+    "id": 7,
+    "bbox": [
+      778,
+      909,
+      954,
+      1085
+    ],
+    "center": [
+      949,
+      914
+    ],
+    "radius": 166,
+    "coverage": 0.1805,
+    "quadrant_coverage": [
+      0.0,
+      0.722,
+      0.0,
+      0.0
+    ],
+    "swing_quadrant": 1,
+    "swing_direction": "down-left",
+    "is_double_door": true
+  }
+]

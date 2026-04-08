@@ -1,0 +1,4 @@
+Detect dimension lines (the arrow-headed horizontal/vertical lines around the perimeter)
+Crop each dimension region and run focused OCR on it for better accuracy
+Parse the structured data (mm value, feet-inches value, which wall it refers to)
+Associate room names with their areas into room objects

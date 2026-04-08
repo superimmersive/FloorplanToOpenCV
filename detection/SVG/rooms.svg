@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2151 1624" width="2151" height="1624">
+  <g id="rooms" stroke="#2e7d32" stroke-width="1">
+    <polygon points="391,257 391,422 252,423 252,721 390,722 390,905 774,905 775,882 776,903 793,903 794,890 957,890 957,884 794,884 793,891 778,890 778,778 883,777 883,754 913,753 913,725 929,724 929,257" fill="#4caf50" stroke="#2e7d32" stroke-width="1" />
+    <polygon points="1318,821 1318,1099 1455,1100 1454,1112 1318,1112 1318,1332 1866,1332 1866,1241 1885,1240 1885,963 1866,962 1866,880 1576,880 1575,821" fill="#2196f3" stroke="#2e7d32" stroke-width="1" />
+    <polygon points="1772,350 1472,350 1472,553 1318,554 1318,818 1573,818 1574,733 1772,733" fill="#ff9800" stroke="#2e7d32" stroke-width="1" />
+    <polygon points="391,1331 703,1331 704,1270 705,1326 750,1326 750,1109 709,1109 706,1174 705,1109 693,1106 751,1105 752,1085 916,1085 916,1066 777,1065 777,926 391,926" fill="#9c27b0" stroke="#2e7d32" stroke-width="1" />
+    <polygon points="780,778 780,882 957,882 958,1032 1078,1033 1078,1255 1099,1255 1100,1262 959,1263 959,1295 992,1296 992,1331 1038,1331 1039,1284 1051,1285 1051,1322 1202,1322 1203,1208 1215,1209 1215,1331 1288,1331 1288,963 1140,962 1140,778" fill="#00bcd4" stroke="#2e7d32" stroke-width="1" />
+    <polygon points="1084,253 1084,380 1053,381 1053,527 1289,527 1289,506 1150,504 1291,503 1292,497 1317,497 1318,553 1469,553 1469,350 1420,349 1420,257 1318,257 1318,364 1291,365 1290,292 1252,292 1251,253" fill="#ff5722" stroke="#2e7d32" stroke-width="1" />
+    <polygon points="915,725 915,775 1139,775 1139,676 1157,675 1158,823 1284,823 1284,553 1126,553 1126,618 1146,621 1126,622 1125,692 1124,623 1032,623 1032,710 1099,710 1099,715 963,715 962,754 930,754 929,725" fill="#e91e63" stroke="#2e7d32" stroke-width="1" />
+    <polygon points="771,1109 771,1331 929,1331 930,1260 1075,1260 1075,1142 970,1142 969,1126 933,1126 932,1109" fill="#cddc39" stroke="#2e7d32" stroke-width="1" />
+    <text x="717" y="745" font-size="14" fill="#000" text-anchor="middle">LOUNGE</text>
+    <text x="1612" y="1064" font-size="14" fill="#000" text-anchor="middle">DINING</text>
+    <text x="1534" y="614" font-size="14" fill="#000" text-anchor="middle">KITCHEN</text>
+    <text x="712" y="1144" font-size="14" fill="#000" text-anchor="middle">STUDY</text>
+    <text x="1067" y="1162" font-size="14" fill="#000" text-anchor="middle">HALL</text>
+    <text x="1272" y="403" font-size="14" fill="#000" text-anchor="middle">LAUNDRY</text>
+    <text x="1082" y="694" font-size="14" fill="#000" text-anchor="middle">ST.</text>
+    <text x="936" y="1194" font-size="14" fill="#000" text-anchor="middle">WC</text>
+  </g>
+</svg>

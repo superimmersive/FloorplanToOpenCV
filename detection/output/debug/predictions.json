@@ -1,0 +1,405 @@
+[
+  {
+    "path": "training_data\\doors\\GF_clean_0003_Layer 3.jpg",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 0.601
+      },
+      {
+        "class": "doors",
+        "prob": 0.3557
+      }
+    ]
+  },
+  {
+    "path": "training_data\\doors\\GF_clean_0003_Layer-3.png",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 0.996
+      },
+      {
+        "class": "doors",
+        "prob": 0.004
+      }
+    ]
+  },
+  {
+    "path": "training_data\\doors\\GF_clean_0008_Layer 8.jpg",
+    "predictions": [
+      {
+        "class": "doors",
+        "prob": 0.9992
+      },
+      {
+        "class": "stairs",
+        "prob": 0.0007
+      }
+    ]
+  },
+  {
+    "path": "training_data\\doors\\GF_clean_0008_Layer-8.png",
+    "predictions": [
+      {
+        "class": "doors",
+        "prob": 1.0
+      },
+      {
+        "class": "windows",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\doors\\GF_clean_0009_Layer 9.jpg",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 0.7084
+      },
+      {
+        "class": "doors",
+        "prob": 0.262
+      }
+    ]
+  },
+  {
+    "path": "training_data\\doors\\GF_clean_0009_Layer-9.png",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 0.9975
+      },
+      {
+        "class": "doors",
+        "prob": 0.0025
+      }
+    ]
+  },
+  {
+    "path": "training_data\\fixtures\\GF_clean_0011_Layer 11.jpg",
+    "predictions": [
+      {
+        "class": "fixtures",
+        "prob": 0.7399
+      },
+      {
+        "class": "windows",
+        "prob": 0.209
+      }
+    ]
+  },
+  {
+    "path": "training_data\\fixtures\\GF_clean_0011_Layer-11.png",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 1.0
+      },
+      {
+        "class": "doors",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\fixtures\\GF_clean_0012_Layer 12.jpg",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 0.9992
+      },
+      {
+        "class": "doors",
+        "prob": 0.0004
+      }
+    ]
+  },
+  {
+    "path": "training_data\\fixtures\\GF_clean_0012_Layer-12.png",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 0.9999
+      },
+      {
+        "class": "doors",
+        "prob": 0.0001
+      }
+    ]
+  },
+  {
+    "path": "training_data\\fixtures\\GF_clean_0013_Layer 13.jpg",
+    "predictions": [
+      {
+        "class": "fixtures",
+        "prob": 0.9992
+      },
+      {
+        "class": "stairs",
+        "prob": 0.0004
+      }
+    ]
+  },
+  {
+    "path": "training_data\\fixtures\\GF_clean_0013_Layer-13.png",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 1.0
+      },
+      {
+        "class": "windows",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\fixtures\\GF_clean_0014_Layer 14.jpg",
+    "predictions": [
+      {
+        "class": "fixtures",
+        "prob": 0.9996
+      },
+      {
+        "class": "windows",
+        "prob": 0.0003
+      }
+    ]
+  },
+  {
+    "path": "training_data\\fixtures\\GF_clean_0014_Layer-14.png",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 1.0
+      },
+      {
+        "class": "fixtures",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\fixtures\\GF_clean_0015_Layer 15.jpg",
+    "predictions": [
+      {
+        "class": "fixtures",
+        "prob": 0.8581
+      },
+      {
+        "class": "windows",
+        "prob": 0.1192
+      }
+    ]
+  },
+  {
+    "path": "training_data\\fixtures\\GF_clean_0015_Layer-15.png",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 0.847
+      },
+      {
+        "class": "fixtures",
+        "prob": 0.1466
+      }
+    ]
+  },
+  {
+    "path": "training_data\\stairs\\GF_clean_0010_Layer 10.jpg",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 1.0
+      },
+      {
+        "class": "windows",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\stairs\\GF_clean_0010_Layer-10.png",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 1.0
+      },
+      {
+        "class": "doors",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\stairs\\Layer 17.png",
+    "predictions": [
+      {
+        "class": "stairs",
+        "prob": 1.0
+      },
+      {
+        "class": "windows",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0001_Layer 2.jpg",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 0.998
+      },
+      {
+        "class": "doors",
+        "prob": 0.0018
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0001_Layer-2.png",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 0.9648
+      },
+      {
+        "class": "doors",
+        "prob": 0.0351
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0002_Layer 1.jpg",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 0.999
+      },
+      {
+        "class": "doors",
+        "prob": 0.0009
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0002_Layer-1.png",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 0.8762
+      },
+      {
+        "class": "doors",
+        "prob": 0.1237
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0004_Layer 5.jpg",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 1.0
+      },
+      {
+        "class": "doors",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0004_Layer-5.png",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 1.0
+      },
+      {
+        "class": "doors",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0005_Layer 4.jpg",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 1.0
+      },
+      {
+        "class": "doors",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0005_Layer-4.png",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 1.0
+      },
+      {
+        "class": "doors",
+        "prob": 0.0
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0006_Layer 6.jpg",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 0.9735
+      },
+      {
+        "class": "fixtures",
+        "prob": 0.0197
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0006_Layer-6.png",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 0.743
+      },
+      {
+        "class": "doors",
+        "prob": 0.2568
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0007_Layer 7.jpg",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 0.9749
+      },
+      {
+        "class": "fixtures",
+        "prob": 0.0184
+      }
+    ]
+  },
+  {
+    "path": "training_data\\windows\\GF_clean_0007_Layer-7.png",
+    "predictions": [
+      {
+        "class": "windows",
+        "prob": 0.9732
+      },
+      {
+        "class": "doors",
+        "prob": 0.0268
+      }
+    ]
+  }
+]

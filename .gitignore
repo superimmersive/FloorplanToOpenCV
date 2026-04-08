@@ -1,0 +1,55 @@
+# Stray lockfile at repo root (no package.json here)
+/package-lock.json
+
+# Dependencies & build
+node_modules/
+dist/
+.vite/
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor (optional: remove .vscode/ line if you want shared tasks)
+# .vscode/
+
+# App-local saved documents (keep folder, ignore contents)
+webappVectorEditorTest/saves/*.json
+webappVectorEditorTest/saves/*-floorplan.*
+
+# Cursor / IDE session
+.cursor/
+
+# Local toolchains & installers (not needed for source-only clone)
+Tools/
+
+# Confidential or local-only project notes (remove this line if you want them in the repo)
+Project Overview/
+
+# Binaries / archives
+*.exe
+*.tar.gz
+*.zip
+*.7z
+
+# Optional: large Blender reference meshes (uncomment if you use Git LFS instead)
+# webappVectorEditorTest/blender/OBJ refs/
+
+# ML weights (GitHub max ~100 MB per file; keep locally or use Git LFS)
+models/*.pt

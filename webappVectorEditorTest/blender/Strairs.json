@@ -1,0 +1,194 @@
+{
+  "units": "mm",
+  "version": 2,
+  "buildingDefaults": {
+    "foundationHeightMm": 200,
+    "ceilingThicknessMm": 0,
+    "wallHeightMm": 2400,
+    "windowHeightMm": 1200,
+    "windowSillHeightMm": 900,
+    "doorSillHeightMm": 0
+  },
+  "layers": [
+    {
+      "id": "layer-reference-image",
+      "name": "Floor plan",
+      "color": "#94a3b8",
+      "zPositionMm": 0,
+      "extrusionHeightMm": 0
+    },
+    {
+      "id": "layer-foundation",
+      "name": "Foundation",
+      "color": "#78716c",
+      "zPositionMm": 0,
+      "extrusionHeightMm": 200
+    },
+    {
+      "id": "layer-floor",
+      "name": "Floor",
+      "color": "#e7e5e4",
+      "zPositionMm": 200,
+      "extrusionHeightMm": 0
+    },
+    {
+      "id": "layer-walls",
+      "name": "Walls",
+      "color": "#dc2626",
+      "zPositionMm": 200,
+      "extrusionHeightMm": 2400
+    },
+    {
+      "id": "layer-inner-walls",
+      "name": "Inner walls",
+      "color": "#0d9488",
+      "zPositionMm": 200,
+      "extrusionHeightMm": 2400
+    },
+    {
+      "id": "layer-windows",
+      "name": "Windows",
+      "color": "#38bdf8",
+      "zPositionMm": 1100,
+      "extrusionHeightMm": 1200
+    },
+    {
+      "id": "layer-doors",
+      "name": "Doors",
+      "color": "#22c55e",
+      "zPositionMm": 200,
+      "extrusionHeightMm": 2032
+    },
+    {
+      "id": "layer-door-items",
+      "name": "Door items",
+      "color": "#3b82f6",
+      "zPositionMm": 201,
+      "extrusionHeightMm": 2032
+    },
+    {
+      "id": "layer-stairs",
+      "name": "Stairs",
+      "color": "#d97706",
+      "zPositionMm": 200,
+      "extrusionHeightMm": 2400
+    },
+    {
+      "id": "layer-floor-skirting",
+      "name": "Floor skirting",
+      "color": "#a8a29e",
+      "zPositionMm": 200,
+      "extrusionHeightMm": 80
+    },
+    {
+      "id": "layer-ceiling-skirting",
+      "name": "Ceiling skirting",
+      "color": "#c4b5a0",
+      "zPositionMm": 2520,
+      "extrusionHeightMm": 80
+    },
+    {
+      "id": "layer-ceiling",
+      "name": "Ceiling",
+      "color": "#d6d3d1",
+      "zPositionMm": 2600,
+      "extrusionHeightMm": 0
+    }
+  ],
+  "objects": [
+    {
+      "id": "obj-1775579248039-2o9i4f",
+      "layerId": "layer-stairs",
+      "position": [
+        0,
+        0
+      ],
+      "rotationDeg": 0,
+      "scale": [
+        1,
+        1
+      ],
+      "polygons": [
+        {
+          "id": "poly-1775579248038-t2997e-q0",
+          "verts": [
+            [
+              -1700,
+              796.2420693020983
+            ],
+            [
+              1920,
+              796.2420693020983
+            ],
+            [
+              1920,
+              1796.2420693020983
+            ],
+            [
+              -1700,
+              1796.2420693020983
+            ]
+          ]
+        },
+        {
+          "id": "poly-1775579248038-t2997e-q1",
+          "verts": [
+            [
+              1920,
+              796.2420693020983
+            ],
+            [
+              2920,
+              796.2420693020983
+            ],
+            [
+              2920,
+              1796.2420693020983
+            ],
+            [
+              1920,
+              1796.2420693020983
+            ]
+          ]
+        },
+        {
+          "id": "poly-1775579248038-t2997e-q2",
+          "verts": [
+            [
+              1920,
+              -1830
+            ],
+            [
+              2920,
+              -1830
+            ],
+            [
+              2920,
+              796.2420693020983
+            ],
+            [
+              1920,
+              796.2420693020983
+            ]
+          ]
+        }
+      ],
+      "centerline": [
+        [
+          -1700,
+          1296.2420693020983
+        ],
+        [
+          2420,
+          1296.2420693020983
+        ],
+        [
+          2420,
+          -1830
+        ]
+      ],
+      "itemId": "stairs",
+      "drawWidthMm": 1000
+    }
+  ]
+}

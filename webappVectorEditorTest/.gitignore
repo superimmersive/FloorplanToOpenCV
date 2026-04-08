@@ -1,0 +1,3 @@
+# Local project files (npm run dev / preview)
+saves/*.json
+saves/*-floorplan.*

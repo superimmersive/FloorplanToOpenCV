@@ -1,0 +1,194 @@
+:root {
+  --bg: #1a1b1e;
+  --card: #25262b;
+  --text: #e0e0e0;
+  --muted: #909296;
+  --accent: #4dabf7;
+  --success: #51cf66;
+  --error: #ff6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 1.5rem;
+  line-height: 1.5;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0 0 0.5rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.upload-section input[type="file"] {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  min-height: 1.2em;
+}
+
+.status.success { color: var(--success); }
+.status.error { color: var(--error); }
+
+.job-id {
+  font-family: ui-monospace, monospace;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-top: 0.25rem;
+}
+
+.layer-controls {
+  margin-bottom: 0.75rem;
+}
+
+.layer-controls label {
+  margin-right: 0.5rem;
+}
+
+.layer-controls select {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--muted);
+  border-radius: 4px;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.canvas-wrap {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow: auto;
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+}
+
+.canvas-wrap img,
+.canvas-wrap canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+#vectorCanvas,
+#maskCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#vectorCanvas {
+  pointer-events: none;
+}
+
+#maskCanvas {
+  cursor: crosshair;
+  pointer-events: none;
+}
+
+#maskCanvas.editing {
+  pointer-events: auto;
+}
+
+.brush-controls {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.brush-controls label {
+  margin-right: 0.75rem;
+}
+
+.brush-controls input[type="range"] {
+  vertical-align: middle;
+  margin-left: 0.25rem;
+}
+
+#saveMaskBtn,
+#reRunAfterMaskBtn {
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+#reRunAfterMaskBtn {
+  background: var(--success);
+}
+
+.editor-link-wrap {
+  margin-bottom: 0.75rem;
+}
+
+.editor-link-wrap a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.editor-link-wrap a:hover {
+  text-decoration: underline;
+}

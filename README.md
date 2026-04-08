@@ -22,6 +22,18 @@ npm run dev
 
 - **Node.js** (for the vector editor)
 - **Python 3** + `webapp/requirements.txt` (for the Flask app and detection tools)
+- **[Git LFS](https://git-lfs.com/)** — required to fetch large files tracked in this repo (e.g. `models/*.pt`).
+
+### Git LFS
+
+PyTorch weights under `models/` are stored with Git LFS (see `.gitattributes`). After cloning:
+
+```bash
+git lfs install
+git lfs pull   # or clone with: git lfs clone <repo-url>
+```
+
+If `models/*.pt` is missing or tiny (pointer file only), run `git lfs pull` from the repo root.
 
 ---
 

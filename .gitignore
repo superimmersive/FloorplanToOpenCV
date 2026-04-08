@@ -48,8 +48,5 @@ Project Overview/
 *.zip
 *.7z
 
-# Optional: large Blender reference meshes (uncomment if you use Git LFS instead)
+# Optional: large Blender reference meshes (use Git LFS if you track them — see .gitattributes)
 # webappVectorEditorTest/blender/OBJ refs/
-
-# ML weights (GitHub max ~100 MB per file; keep locally or use Git LFS)
-models/*.pt

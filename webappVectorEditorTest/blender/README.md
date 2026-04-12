@@ -2,6 +2,8 @@
 
 This folder contains a Blender script that imports the JSON exported from the web vector editor.
 
+**FBX meshes:** store local `.fbx` assets in [`fbx/`](./fbx/) (not used automatically by the JSON importer unless you extend the script).
+
 ## Units
 
 - **Export (web app):** 1 unit = 1 mm.

@@ -1,6 +1,6 @@
 import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
-import { Environment, Grid, OrbitControls } from "@react-three/drei";
+import { Environment, Grid, OrbitControls, TransformControls } from "@react-three/drei";
 import { WebGLPathTracer } from "three-gpu-pathtracer";
 import * as THREE from "three";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader.js";
@@ -64,16 +64,20 @@ function GLTFSpecGlossPlugin(parser) {
   };
 }
 
+const RASTER_TONE_MAPPING_EXPOSURE = 0.5;
+const PATH_TRACING_TONE_MAPPING_EXPOSURE = 0.72;
+
 const PATH_TRACING_PRESETS = {
   performance: {
     label: "Performance",
     samples: 128,
     bounces: 3,
     resolutionFactor: 1,
-    renderDelay: 150,
-    fadeDuration: 500,
-    tiles: [3, 3],
-    minSamples: 1,
+    renderDelay: 0,
+    fadeDuration: 900,
+    // One tile per frame => sample counter increments every frame (see three-gpu-pathtracer PathTracingRenderer).
+    tiles: [1, 1],
+    minSamples: 20,
     filterGlossyFactor: 0.6,
     rasterizeScene: true,
     textureSize: [1024, 1024],
@@ -83,10 +87,10 @@ const PATH_TRACING_PRESETS = {
     samples: 64,
     bounces: 2,
     resolutionFactor: 1,
-    renderDelay: 100,
-    fadeDuration: 500,
-    tiles: [2, 2],
-    minSamples: 1,
+    renderDelay: 0,
+    fadeDuration: 900,
+    tiles: [1, 1],
+    minSamples: 20,
     filterGlossyFactor: 0.6,
     rasterizeScene: true,
     textureSize: [1024, 1024],
@@ -262,10 +266,13 @@ function ModelPlacementController({ enabled, importedModelRef, onMove, onPlace }
 function GlbModel({
   source,
   position = [0, 0, 0],
+  scale = 1,
   isPathTraced,
   dynamicLodInRaster,
   lockLodDuringPT,
   onObjectReady,
+  importSelectable,
+  onImportClick,
 }) {
   const { camera, gl } = useThree();
   const [loadedScene, setLoadedScene] = useState(null);
@@ -352,7 +359,16 @@ function GlbModel({
   }, [onObjectReady, source]);
 
   return (
-    <group ref={modelRootRef} position={position}>
+    <group
+      ref={modelRootRef}
+      position={position}
+      scale={[scale, scale, scale]}
+      onClick={(e) => {
+        if (!importSelectable) return;
+        e.stopPropagation();
+        onImportClick?.();
+      }}
+    >
       {loadedScene ? <primitive object={loadedScene} /> : null}
     </group>
   );
@@ -361,10 +377,13 @@ function GlbModel({
 function FbxModel({
   source,
   position = [0, 0, 0],
+  scale = 1,
   isPathTraced,
   dynamicLodInRaster,
   lockLodDuringPT,
   onObjectReady,
+  importSelectable,
+  onImportClick,
 }) {
   const fbxObject = useLoader(FBXLoader, source);
   const { camera } = useThree();
@@ -395,7 +414,16 @@ function FbxModel({
   }, [onObjectReady, source]);
 
   return (
-    <group ref={modelRootRef} position={position}>
+    <group
+      ref={modelRootRef}
+      position={position}
+      scale={[scale, scale, scale]}
+      onClick={(e) => {
+        if (!importSelectable) return;
+        e.stopPropagation();
+        onImportClick?.();
+      }}
+    >
       <primitive object={fbxObject} />
     </group>
   );
@@ -407,11 +435,23 @@ function SceneFromJsx({ sceneId }) {
   return null;
 }
 
+function ImportedModelMoveGizmo({ object, onDragPosition }) {
+  const onObjectChange = useCallback(() => {
+    if (!object) return;
+    onDragPosition([object.position.x, object.position.y, object.position.z]);
+  }, [object, onDragPosition]);
+
+  if (!object) return null;
+
+  return <TransformControls mode="translate" object={object} space="world" onObjectChange={onObjectChange} />;
+}
+
 function SceneContents({
   sceneId,
   glbSource,
   modelFormat = "gltf",
   modelPosition = [0, 0, 0],
+  modelScale = 1,
   includeGrid = true,
   isPathTraced = false,
   dynamicLodInRaster = true,
@@ -420,6 +460,8 @@ function SceneContents({
   showEnvironment = true,
   causticsBoost = false,
   onImportedModelReady,
+  importSelectable,
+  onImportClick,
 }) {
   const directionalIntensity = causticsBoost ? 3.9 : 2.3;
   const directionalPosition = causticsBoost ? [2.4, 7.5, 1.8] : [5, 8, 4];
@@ -451,19 +493,25 @@ function SceneContents({
             <FbxModel
               source={glbSource}
               position={modelPosition}
+              scale={modelScale}
               isPathTraced={isPathTraced}
               dynamicLodInRaster={dynamicLodInRaster}
               lockLodDuringPT={lockLodDuringPT}
               onObjectReady={onImportedModelReady}
+              importSelectable={importSelectable}
+              onImportClick={onImportClick}
             />
           ) : (
             <GlbModel
               source={glbSource}
               position={modelPosition}
+              scale={modelScale}
               isPathTraced={isPathTraced}
               dynamicLodInRaster={dynamicLodInRaster}
               lockLodDuringPT={lockLodDuringPT}
               onObjectReady={onImportedModelReady}
+              importSelectable={importSelectable}
+              onImportClick={onImportClick}
             />
           )
         ) : null}
@@ -501,10 +549,12 @@ function DirectPathTracer({
   onSamplesUpdate,
 }) {
   const { gl, scene, camera, size, controls } = useThree();
+  const CAMERA_SETTLE_MS = 180;
   const ptRef = useRef(null);
   const denoiseResourcesRef = useRef(null);
   const sceneReadyRef = useRef(false);
   const lastSceneObjectCountRef = useRef(-1);
+  const cameraSettleUntilRef = useRef(0);
 
   useEffect(() => {
     const pt = new WebGLPathTracer(gl);
@@ -546,12 +596,27 @@ function DirectPathTracer({
   useEffect(() => {
     const pt = ptRef.current;
     if (!pt || !controls) return undefined;
-    const onChange = () => {
-      pt.updateCamera();
+    const markCameraChanging = () => {
+      cameraSettleUntilRef.current = performance.now() + CAMERA_SETTLE_MS;
     };
+    const onChange = () => {
+      markCameraChanging();
+      pt.updateCamera();
+      pt.reset();
+    };
+    const onStart = () => {
+      markCameraChanging();
+    };
+    const onEnd = () => {
+      markCameraChanging();
+    };
+    controls.addEventListener("start", onStart);
     controls.addEventListener("change", onChange);
+    controls.addEventListener("end", onEnd);
     return () => {
+      controls.removeEventListener("start", onStart);
       controls.removeEventListener("change", onChange);
+      controls.removeEventListener("end", onEnd);
     };
   }, [controls]);
 
@@ -679,6 +744,11 @@ function DirectPathTracer({
     };
 
     pt.renderToCanvasCallback = (target, renderer, quad) => {
+      if (pt.samples < maxSamples) {
+        originalCallback(target, renderer, quad);
+        return;
+      }
+
       if (denoiseGlassOnly || showGlassMaskOverlay) {
         const ptScene = pt.scene;
         const ptCamera = pt.camera;
@@ -742,6 +812,7 @@ function DirectPathTracer({
     denoiseStrength,
     denoiseGlassOnly,
     showGlassMaskOverlay,
+    maxSamples,
     size.width,
     size.height,
   ]);
@@ -761,6 +832,13 @@ function DirectPathTracer({
       pt.reset();
     }
 
+    const isCameraSettling = performance.now() < cameraSettleUntilRef.current;
+    if (isCameraSettling) {
+      renderer.render(frameScene, frameCam);
+      if (onSamplesUpdate) onSamplesUpdate(pt.samples);
+      return;
+    }
+
     pt.pausePathTracing = pt.samples >= maxSamples;
     pt.renderSample();
     if (onSamplesUpdate) {
@@ -768,6 +846,22 @@ function DirectPathTracer({
     }
   }, 1);
 
+  return null;
+}
+
+/**
+ * Path tracing integrates lighting in linear space and composites via the pathtracer fullscreen pass.
+ * The same renderer exposure as raster often reads darker (especially the background / miss rays).
+ * Bump tone-mapping exposure only while PT is active so the canvas matches raster brightness better.
+ */
+function PathTracingToneCompensation() {
+  const { gl } = useThree();
+  useEffect(() => {
+    gl.toneMappingExposure = PATH_TRACING_TONE_MAPPING_EXPOSURE;
+    return () => {
+      gl.toneMappingExposure = RASTER_TONE_MAPPING_EXPOSURE;
+    };
+  }, [gl]);
   return null;
 }
 
@@ -845,6 +939,9 @@ export default function App() {
   const [glbSource, setGlbSource] = useState("");
   const [modelFormat, setModelFormat] = useState("gltf");
   const [modelPosition, setModelPosition] = useState([0, 0, 0]);
+  const [modelScale, setModelScale] = useState(1);
+  const [modelTransformSelected, setModelTransformSelected] = useState(false);
+  const [importedModelObject, setImportedModelObject] = useState(null);
   const [isPlacingModel, setIsPlacingModel] = useState(false);
   const [glbUrlInput, setGlbUrlInput] = useState("");
   const [uploadedObjectUrl, setUploadedObjectUrl] = useState("");
@@ -886,6 +983,16 @@ export default function App() {
   }, []);
   const onImportedModelReady = useCallback((obj) => {
     importedModelRef.current = obj;
+    setImportedModelObject(obj ?? null);
+    if (!obj) setModelTransformSelected(false);
+  }, []);
+
+  const onImportModelClick = useCallback(() => {
+    setModelTransformSelected(true);
+  }, []);
+
+  const onTransformDragPosition = useCallback((next) => {
+    setModelPosition(next);
   }, []);
 
 
@@ -902,7 +1009,9 @@ export default function App() {
     if (glbSource && isPlacingModel) {
       return `${modelFormat.toUpperCase()} follows cursor. Click to place (snap to flat surfaces or ground).`;
     }
-    if (glbSource) return `${modelFormat.toUpperCase()} loaded.`;
+    if (glbSource) {
+      return `${modelFormat.toUpperCase()} loaded. Click the model to select, then drag axes to move. Click empty space to deselect.`;
+    }
     return "No model selected. JSX scene is visible.";
   }, [glbSource, modelFormat, isPlacingModel]);
 
@@ -915,6 +1024,7 @@ export default function App() {
     if (uploadedObjectUrl) URL.revokeObjectURL(uploadedObjectUrl);
     setUploadedObjectUrl(url);
     setModelPosition([0, 0, 0]);
+    setModelTransformSelected(false);
     setIsPlacingModel(true);
     setGlbSource(url);
   };
@@ -929,6 +1039,7 @@ export default function App() {
     const urlWithoutQuery = trimmedUrl.split("?")[0].split("#")[0].toLowerCase();
     setModelFormat(urlWithoutQuery.endsWith(".fbx") ? "fbx" : "gltf");
     setModelPosition([0, 0, 0]);
+    setModelTransformSelected(false);
     setIsPlacingModel(true);
     setGlbSource(trimmedUrl);
   };
@@ -942,6 +1053,8 @@ export default function App() {
     setModelFormat("gltf");
     setModelPosition([0, 0, 0]);
     setIsPlacingModel(false);
+    setModelTransformSelected(false);
+    setImportedModelObject(null);
     importedModelRef.current = null;
     setGlbUrlInput("");
     if (fileInputRef.current) fileInputRef.current.value = "";
@@ -988,6 +1101,18 @@ export default function App() {
             <option value="caustics-test">CausticsTestScene.jsx</option>
             <option value="none">None</option>
           </select>
+        </label>
+        <label className="control-block">
+          <span>Model scale: {modelScale.toFixed(2)}x</span>
+          <input
+            type="range"
+            min="0.05"
+            max="10"
+            step="0.05"
+            value={modelScale}
+            onChange={(e) => setModelScale(Number(e.target.value))}
+            disabled={!glbSource}
+          />
         </label>
 
         <label className="toggle-row">
@@ -1127,9 +1252,12 @@ export default function App() {
         <Canvas
           camera={{ position: [3.2, 2.1, 3.5], fov: 50 }}
           shadows
+          onPointerMissed={() => {
+            if (!isPlacingModel) setModelTransformSelected(false);
+          }}
           gl={{
             toneMapping: THREE.ACESFilmicToneMapping,
-            toneMappingExposure: 0.5,
+            toneMappingExposure: RASTER_TONE_MAPPING_EXPOSURE,
             outputColorSpace: THREE.SRGBColorSpace,
           }}
         >
@@ -1138,6 +1266,7 @@ export default function App() {
             glbSource={glbSource}
             modelFormat={modelFormat}
             modelPosition={modelPosition}
+            modelScale={modelScale}
             includeGrid={!showPathTracer}
             isPathTraced={showPathTracer}
             showDirectionalLight={showDirectionalLight}
@@ -1146,10 +1275,15 @@ export default function App() {
             dynamicLodInRaster={dynamicLodInRaster}
             lockLodDuringPT={lockLodDuringPT}
             onImportedModelReady={onImportedModelReady}
+            importSelectable={Boolean(glbSource) && !isPlacingModel}
+            onImportClick={onImportModelClick}
           />
+          {glbSource && modelTransformSelected && !isPlacingModel && importedModelObject ? (
+            <ImportedModelMoveGizmo object={importedModelObject} onDragPosition={onTransformDragPosition} />
+          ) : null}
           {showPathTracer ? (
             <DirectPathTracer
-              resetToken={`${sceneId}:${glbSource}:${modelFormat}:${modelPosition.join(",")}:${effectiveSamples}:${effectiveBounces}:${activePreset.resolutionFactor}:${activePreset.tiles.join(",")}:${showDirectionalLight}:${effectiveShowEnvironment}`}
+              resetToken={`${sceneId}:${glbSource}:${modelFormat}:${modelPosition.join(",")}:${modelScale}:${effectiveSamples}:${effectiveBounces}:${activePreset.resolutionFactor}:${activePreset.tiles.join(",")}:${showDirectionalLight}:${effectiveShowEnvironment}`}
               samples={effectiveSamples}
               bounces={effectiveBounces}
               preset={activePreset}
@@ -1160,6 +1294,7 @@ export default function App() {
               onSamplesUpdate={onSamplesUpdate}
             />
           ) : null}
+          {showPathTracer ? <PathTracingToneCompensation /> : null}
 
           <ModelPlacementController
             enabled={Boolean(glbSource) && isPlacingModel}

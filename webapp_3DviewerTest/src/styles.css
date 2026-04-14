@@ -1,0 +1,115 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  width: 100%;
+  height: 100%;
+  background: #10131a;
+  color: #e4e9f8;
+}
+
+.panel {
+  padding: 16px;
+  border-right: 1px solid #2a2f3d;
+  overflow: auto;
+}
+
+.panel h1 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.panel p {
+  margin: 0 0 14px;
+  color: #b6bfd4;
+}
+
+.control-block {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.control-block span {
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+select,
+button,
+input[type="file"] {
+  width: 100%;
+}
+
+input[type="text"],
+select,
+button {
+  border: 1px solid #394156;
+  background: #1c2230;
+  color: #e4e9f8;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.status {
+  margin-top: 14px;
+  font-size: 0.9rem;
+}
+
+.status-pt {
+  margin-top: 4px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #1a2030;
+  border: 1px solid #2a3450;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sample-tracker {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #c8d0e4;
+  font-size: 0.78rem;
+  font-family: monospace;
+  pointer-events: none;
+  letter-spacing: 0.04em;
+}
+

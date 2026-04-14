@@ -1,0 +1,28 @@
+{
+  "name": "webapp_3dviewertest",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Three.js GLB/JSX viewer with optional path tracing",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.0",
+    "@react-three/gpu-pathtracer": "^0.3.2",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "three": "^0.183.2",
+    "three-gpu-pathtracer": "^0.0.24"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^5.4.19"
+  }
+}

@@ -93,10 +93,91 @@ button {
   letter-spacing: 0.02em;
 }
 
+.controls-help {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #161b26;
+  border: 1px solid #2a3348;
+}
+
+.controls-help-title {
+  margin: 0 0 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #98a3bd;
+}
+
+.controls-help-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.controls-help-list li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.controls-help-keys {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  color: #c5cee0;
+  white-space: nowrap;
+}
+
+.controls-help-desc {
+  color: #9aa6bf;
+}
+
+.controls-help-note {
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid #2a3348;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #aeb8d0;
+}
+
+.controls-help-note strong {
+  color: #e4e9f8;
+  font-weight: 600;
+}
+
 .viewport {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+/* Stats.js mounts with position:fixed; anchor + class overrides keep it inside the viewport pane */
+.stats-anchor {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 20;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: auto;
+}
+
+.viewport .stats-panel {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  z-index: 1 !important;
+  cursor: pointer !important;
 }
 
 .sample-tracker {
